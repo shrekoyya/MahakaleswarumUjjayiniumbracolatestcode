@@ -1,0 +1,1229 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- title -->
+    <title>Temple</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon-name.png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style type="text/css">
+      @@media only screen and (max-width: 650px) {
+          .navbar-brand img {
+            width: 65px;
+            }
+            .navbar>.container{
+                flex-wrap: inherit;
+                justify-content: space-evenly;
+            }
+            .navbar-brand p{margin-left: 0px !important;}
+            .navbar-brand {padding-left: 0px !important;}
+        }  
+
+
+.navbar-brand p
+{
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 600;
+    margin-left: 10px;
+    letter-spacing: .2px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- preloader -->
+    <!-- <div class="preloader">
+        <div class="loader-book">
+            <div class="loader-book-page"></div>
+            <div class="loader-book-page"></div>
+            <div class="loader-book-page"></div>
+        </div>
+    </div> -->
+    <!-- preloader end -->
+
+
+   
+
+
+   
+
+
+
+<style>
+    
+ @@media only screen and (max-width: 650px) {
+         .carousel {
+    position: relative;
+    margin-top: 75px;
+}
+        }  
+
+</style>
+<!-- header area -->
+   
+
+
+<style>
+    
+ @@media only screen and (max-width: 650px) {
+         .carousel {
+    position: relative;
+    margin-top: 75px;
+}
+        }  
+
+</style>
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+            <img src="assets/img/slider/herobanner.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+            <img src="assets/img/slider/herobanner.jpeg" class="d-block w-100" alt="...">
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+ <main class="main">
+
+
+ <style>
+.sd-t1-bottom {
+    height: 55px;
+    overflow: hidden;
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-bottom: 1px solid #d0d0d0;
+    border-top: 1px solid #d0d0d0;
+    align-items: center;
+    justify-content: space-between;
+}
+.sd-orange {
+    width: 11%;
+    margin: 0;
+    color: #f58220;
+    font-size: 16px;
+    border-right: 1px solid #d8d8d8;
+    text-align-last: center;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.sd-marquee-text {
+    font-size: 15px;
+    color: #2f3193;
+    width: 80%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+ .sd-t1-bottom div button {
+    padding: 6px 13px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #f58220;
+    border: none;
+    display: flex
+;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 3px;
+}
+
+.sd-t1-bottom {
+    height: 55px;
+    overflow: hidden;
+    display: flex
+;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-bottom: 1px solid #d0d0d0;
+    border-top: 1px solid #d0d0d0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.sd-template-one {
+    overflow: hidden;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #efefef;
+    font-family: "Barlow", sans-serif;
+}
+
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-one .sd-t1-bottom {
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-one .sd-t1-bottom {
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-one .sd-t1-bottom .sd-orange {
+    width: 20%;
+    font-size: 11px;
+    padding-right: 3px;
+    text-align: center;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-one .sd-t1-bottom .sd-marquee-text {
+    width: 55%;
+    font-size: 12px;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-on@@media only screen and (max-width: 650px) {
+  .sd-template-one .sd-t1-bottom .sd-marquee-text {
+    width: 55%;
+    font-size: 12px;
+  }
+}e .sd-t1-bottom div button {
+    font-size: 12px;
+    padding: 2px 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+</style> 
+
+
+
+
+
+        <div class="sd-template-one">
+        <div class="sd-t1-bottom"><p class="sd-orange">Temple News</p><marquee id="marquee" direction="left" class="sd-marquee-text">Bhasma Aarti (Abhisheka with cremation ash) with godly blessings, scroll down to know all about Rotary Club Charitable Trust Mahakaleswarum another Ujjayani Temple.</marquee><div><button>View All</button></div>
+       </div>
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+.services{margin-top:50px ;}
+
+
+.services .icon-box {
+  text-align: center;
+  padding: 50px 20px;
+  transition: all ease-in-out 0.3s;
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: transparent;
+  border-radius: 5px;
+  transition: all .3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+
+.services .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.services .icon-box .icon::before {
+  position: absolute;
+  content: '';
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: #fbe2dd;
+  border-radius: 5px;
+  transition: all .3s ease-out 0s;
+  transform: translateZ(-1px);
+  display: none;
+}
+
+.services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.services .icon-box h4 a {
+  color: #545454;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #181818;
+}
+
+.services .icon-box:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.services .row>*{padding-right:0px !important;padding-left:0px !important;}
+
+
+@@media only screen and (max-width: 650px) {
+  .services .row {
+    padding: 0px 30px;
+  }
+  .services .row .mt-4{
+    margin-top: 0px !important;
+  }
+  .services{
+    margin-top: 30px;
+  }
+  .services .icon-box{
+    padding: 20px 20px;
+  }
+}
+
+
+.cust-button {
+    width: 100px;            /* Fixed width */
+    padding: 6px 13px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #f58220;
+    border: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center; /* Center text and icon inside the button */
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto;          /* This centers the button inside the parent */
+    text-align: center;
+
+}
+
+
+</style>
+
+
+<section id="services" class="services">
+      <div class="container">
+
+
+        <div class="row" style="display: flex;">
+    <!-- Box 1 -->
+    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="background-color: #fde6d2;">
+        <div class="icon-box d-flex flex-column">
+            <div class="icon"><i class=""><img src="assets/img/new/donation.png"></i></div>
+            <h4><a href="" style="color:#2f3293 !important;">e-Hundi</a></h4>
+            <p>e-Hundi allows donations from people across the globe for the welfare of the sacred Srisailam. Devotees can offer their donations via internet banking.</p>
+            <button class="cust-button mt-auto">Donate Now</button>
+        </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" style="background-color: #facda6;">
+        <div class="icon-box d-flex flex-column">
+            <div class="icon"><i class=""><img src="assets/img/new/namet.png"></i></div>
+            <h4><a href="" style="color:#181818 !important;">Paroksha Seva</a></h4>
+            <p style="color:#2f3293 !important;">In a world, that's filled with the essence of Shiva, one can now wholeheartedly worship Sri Mallikarjuna Swamy and Bhramarambika Devi from anywhere in the world.</p>
+            <button class="cust-button mt-auto">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" style="background-color: #f58220;">
+        <div class="icon-box d-flex flex-column">
+            <div class="icon"><i class=""><img src="assets/img/new/im-6.png"></i></div>
+            <h4><a href="" style="color:#fff !important;">AnnaPrasadam</a></h4>
+            <p style="color:#fff !important;">Offering one Annadhanam is equals to donating 1000 elephants, a crore cows, gold and land that extends until seashore; fulfilling all duties of a family.</p>
+            <button class="cust-button mt-auto" style="background-color: #fff; color: #f58220;">Donate Now</button>
+        </div>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="background-color: #2f3293;">
+        <div class="icon-box d-flex flex-column">
+            <div class="icon"><i class=""><img src="assets/img/new/img-55.png"></i></div>
+            <h4><a href="" style="color:#fff !important;">Accommodation</a></h4>
+            <p style="color:#fff !important;">Comfortable and hygienic AC/Non AC Rooms, Cottages, Guest Houses, Hotels with all amenities to accommodate pilgrims on holy Srisailam Hills.</p>
+            <button class="cust-button mt-auto" style="background-color: #fff; color: #2f3293;">Book Now</button>
+        </div>
+    </div>
+</div>
+
+
+          
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+<style>
+
+    .theme-btn-new{
+    border: none;
+    width: 150px;
+    background-color: #f58220;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 6px 13px;
+    letter-spacing: .2px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 3px;
+}
+
+
+
+.site-title-tagline{color: #fff !important;
+    font-size: 34px !important;
+    font-weight: 400 !important;}
+</style>
+
+
+
+<!-- enroll area-->
+        <div class="enroll-area pt-80 pb-80" style="margin-top: 50px;">
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="enroll-right wow fadeInUp" data-wow-delay=".25s">
+                                <div class="skill-content">
+                                    <div class="site-heading mb-3">
+                                        <h2 class="site-title text-white" style="">
+                                            <span class="site-title-tagline" style="border-bottom: none;"><i class="">
+                                                <img src="assets/img/new/logo-2.png" style="height: 70px;width: 70px;">
+                                            </i>
+                                             Mahakaleswarum
+                                        </h2>
+                                    </div>
+                                    <p class="text-white">
+                                        The Mahakaleshwar Temple in Rajahmundry is a newly constructed temple dedicated to Lord Shiva, specifically known for its Bhasma Aarti (a ritual involving cremation ashes) and is considered the first Mahakaleshwar temple in South India. It's also known as the "second Ujjain" due to its resemblance to the famous Mahakaleshwar Jyotirlinga in Ujjain, Madhya Pradesh. 
+
+                                    </p>
+                                   
+                                    <a href="https://www.youtube.com/watch?v=_FoEZTdJXRo" class="theme-btn-new mt-5">WATCH NOW <i class="fas fa-arrow-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6">
+                            <iframe width="100%" height="305" src="https://www.youtube.com/embed/_FoEZTdJXRo" class="img-responsive" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- enroll area end -->
+
+
+
+
+
+
+<style type="text/css">
+.sd-template-four {
+     height: 640px;
+     padding: 60px 60px 50px;
+    display: flex;
+    font-family: "Barlow", sans-serif;
+}
+
+
+.sd-template-four .sd-t4-box-left {
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(assets/img/new/image-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four {
+    height: 720px !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-left {
+    width: 100% !important;
+    height: 50% !important;
+    padding: 25px !important;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-left .sd-t4-box-left-one {
+    margin-bottom: 5px;
+    font-size: ;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-left .sd-t4-box-left-one h4 {
+    font-size: 17px;
+    margin-bottom: 0;
+  }
+}
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-left .sd-t4-box-left-two p {
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-left .sd-t4-box-left-two p {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+}
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-left .sd-t4-box-left-one h4 {
+    font-size: 17px !important;
+    margin-bottom: 0;
+  }
+.sd-template-four .sd-t4-box-left .sd-t4-box-left-one p{
+    font-size: 22px !important;
+}
+
+
+}
+
+.sd-template-four {
+    height: 640px;
+    padding: 60px 60px 50px;
+    display: flex
+;
+    font-family: "Barlow", sans-serif;
+}
+
+.sd-template-four .sd-t4-box-left .sd-t4-box-left-one h4 {
+    color: #2f3293;
+    margin-bottom: -10px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.sd-template-four .sd-t4-box-left .sd-t4-box-left-one p {
+    font-size: 38px;
+    letter-spacing: 0;
+    color: #2f3193;
+}
+.sd-template-four .sd-t4-box-left .sd-t4-box-left-two p {
+    word-wrap: break-word;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #181818;
+    margin-bottom: 30px;
+}
+.sd-template-four .sd-t4-box-right {
+    width: 50%;
+    height: 100%;
+    display: flex
+;
+    flex-wrap: wrap;
+}
+
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-one {
+    height: 50%;
+    width: 50%;
+    background-color: #f58220;
+    display: flex
+;
+    color: #fff;
+    justify-content: space-evenly;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-one img {
+    height: 68px;
+}
+
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-one h3 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0;
+}
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-one button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 13px;
+    border: none;
+    background-color: #fff;
+    color: #f58220;
+    display: flex
+;
+    white-space: nowrap;
+    border-radius: 3px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-two {
+    height: 50%;
+    width: 50%;
+    overflow: hidden;
+    background-image: url(assets/img/new/about-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-three {
+    height: 50%;
+    width: 50%;
+    background-color: #2f3293;
+    overflow: hidden;
+    background-image: url(assets/img/new/about-2.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-four {
+    height: 50%;
+    width: 50%;
+    background-color: #2f3293;
+    display: flex
+;
+    color: #fff;
+    justify-content: space-evenly;
+    padding: 2vw;
+    flex-direction: column;
+    align-items: center;
+}
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-four img {
+    height: 60px;
+}
+        
+
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-four button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 13px;
+    border: none;
+    background-color: #fff;
+    color: #2f3193;
+    display: flex
+;
+    white-space: nowrap;
+    border-radius: 3px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sd-template-four .sd-t4-box-right .sd-t4-box-right-four h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0;
+}
+.sd-template-four .sd-t4-box-left .sd-t4-box-left-four button {
+    border: none;
+    background-color: #f58220;
+    color: #fff;
+    display: flex
+;
+    padding: 6px 13px;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: space-evenly;
+    align-items: center;
+    white-space: nowrap;
+    border-radius: 3px;
+}
+
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-left .sd-t4-box-left-two p span {
+    font-size: 13px !important;
+  }
+}
+
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-left .sd-t4-box-left-four button {
+    font-size: 12px;
+    border: none;
+    padding: 2px 10px;
+    word-break: keep-all;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-right {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-right .sd-t4-box-right-one img {
+    height: 40px;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-right .sd-t4-box-right-one h3 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-right .sd-t4-box-right-one button {
+    font-size: 12px;
+    border: none;
+    padding: 2px 10px;
+    word-break: keep-all;
+  }
+}
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-right .sd-t4-box-right-four img {
+    height: 35px;
+  }
+}
+
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-right .sd-t4-box-right-four h3 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+@@media only screen and (max-width: 650px) {
+  .sd-template-four .sd-t4-box-right .sd-t4-box-right-four button {
+    font-size: 12px;
+    padding: 2px 10px;
+    word-break: keep-all;
+  }
+}
+
+
+
+
+
+        </style>
+
+
+
+
+
+
+        <div class="sd-template-four">
+            <div class="sd-t4-box-left">
+                <div class="sd-t4-box-left-one">
+                    <h4>About</h4>
+                    <p>Mahakaleshwar Temple</p>
+                </div>
+                <div class="sd-t4-box-left-two">
+                    
+<p><b>Rajamahendravaram(East Godavari District): </b>Sri Mahakaleshwar temple at Rajamahendravaram has started performing the Bhasma Aarti (Abhisheka with cremation ash) to Lord Shiva. The Bhasma Aarti is performed to Lord Shiva only at Jyotirlinga Kshetra, Ujjain in Madhya Pradesh.</p>
+
+                </div>
+                <div class="sd-t4-box-left-four">
+                    <button>Read More </button>
+                </div>
+            </div>
+            <div class="sd-t4-box-right">
+                <div class="sd-t4-box-right-one">
+                    <img src="assets/img/new/about-3.png" alt="pooja">
+                    <h3>Bhasma Aarti (Abhisheka with cremation ash) </h3>
+                    <button>View </button>
+                </div>
+                <div class="sd-t4-box-right-two"></div>
+                <div class="sd-t4-box-right-three"></div>
+                <div class="sd-t4-box-right-four">
+                    <img src="assets/img/new/about-4.png" alt="last"><h3>Main Offerings</h3><button>View </button>
+                </div>
+            </div>
+        </div>
+
+
+
+<style type="text/css">
+    .facility-img img {
+     border-radius: 3px;
+}
+
+@@media only screen and (max-width: 650px) {
+  .site-title-tagline {
+    font-size: 25px !important;
+    
+  }
+
+  .site-heading{
+    margin-bottom: 20px;
+  }
+}
+
+
+</style>
+
+
+
+<div class="facility-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6  mx-auto">
+                        <div class="site-heading text-center">
+                            <span class="site-title-tagline" style="font-size: 36px;border-bottom:none;color: #2f3193 !important;">Temples Gallery</span>
+                            <p style="margin-top:0px;"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/1.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInDown" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/2.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/3.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/4.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInDown" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/5.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/6.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/7.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/8.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/9.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/10.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/11.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-6">
+                        <div class="facility-item wow fadeInUp" data-wow-delay=".25s">
+                            <div class="facility-img">
+                                <img src="assets/img/facility/12.jpeg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+<style>
+    
+    .sd-footer-main .sd-footer-top {
+    background-color: #efefef;
+    height: 180px;
+    background-color: #2f3293;
+    width: 100%;
+    display: flex
+;
+    justify-content: space-evenly;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-left {
+    width: 50%;
+    height: 60%;
+    align-self: center;
+    padding-left: 8.5%;
+    padding-right: 6.5%;
+    border-right: 2px solid #6263a8;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-left p {
+    height: 50%;
+    margin: 0;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 400;
+    display: flex
+;
+    justify-content: space-evenly;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-left div {
+    height: 50%;
+    display: flex
+;
+    justify-content: center;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-left div img {
+    height: 45px;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-right {
+    width: 50%;
+    height: 60%;
+    align-self: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-right {
+    width: 50%;
+    height: 60%;
+    align-self: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-right .sd-sub {
+    display: flex
+;
+    flex-direction: column;
+    height: 75%;
+    align-items: center;
+}
+.sd-footer-main .sd-footer-top .sd-footer-top-right .sd-sub .subscribe {
+    background-color: #d8d8d8 !important;
+    border-radius: 4px;
+    height: 42px;
+    display: flex
+;
+    justify-content: space-around;
+    width: 80%;
+    position: relative;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-right .sd-sub .subscribe img {
+    width: 22px;
+    align-self: center;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-right p {
+    height: 50%;
+    margin: 0;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 400;
+    display: flex
+;
+    justify-content: space-evenly;
+}
+
+.sd-footer-main .sd-footer-top .sd-footer-top-right .sd-sub .subscribe input {
+    height: 100%;
+    outline: none;
+    border: none;
+    width: 75%;
+    background-color: #d8d8d8 !important;
+}
+
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-main .sd-footer-top {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-main .sd-footer-top .sd-footer-top-left {
+    width: 90%;
+    height: 50%;
+    border-bottom: 1.5px solid #b3b0b0;
+    border-right: none;
+    padding: 0 15px;
+  }
+}
+
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-main .sd-footer-top .sd-footer-top-left p {
+    font-size: 22px;
+    align-items: center;
+  }
+}
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-main .sd-footer-top .sd-footer-top-left div {
+    padding: 5px;
+  }
+}
+
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-main .sd-footer-top .sd-footer-top-right p {
+    height: 50%;
+    font-size: 22px;
+    align-items: center;
+  }
+}
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-main .sd-footer-top .sd-footer-top-right {
+    margin-top: -15px;
+    width: 100%;
+    height: 50%;
+    padding: 0 24px;
+  }
+}
+@@media (max-width: 767px) {
+  .footer-widget-wrapper,.sd-additional-footer,.sd-visitors, .sd-footer-bottom img {
+    display: none !important;
+  }
+}
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+ .sd-footer-tag .left {
+    justify-content: center !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-tag .middle {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+}
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-tag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+    width: 100%;
+    padding: 0;
+  }
+}
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-tag .right {
+    margin-left: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 10px !important;
+  }
+}
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-tag .middle p {
+    font-size: 10px !important;
+  }
+}
+
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-tag .middle p {
+    font-size: 10px !important;
+  }
+}
+@@media only screen and (max-width: 650px) and (min-width: 350px) {
+  .sd-footer-tag .middle p {
+    font-size: 10px !important;
+  }
+  .sd-footer-tag{
+    padding: 0px !important;
+    margin-top: 20px;
+  }
+  .sd-footer-tag .middle,.sd-footer-tag .right{
+     margin-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+<div class="sd-footer-main">
+<div class="sd-footer-top">
+   <div class="sd-footer-top-left">
+      <p>Download Mobile App</p>
+      <div>
+        <img src="assets/img/new/google-p.png" alt="google play" style="margin-left: 10px; margin-right: 10px;">
+        <img src="assets/img/new/store.png" alt="google play">
+    </div>
+   </div>
+   <div class="sd-footer-top-right">
+      <p>Subscribe Newsletter</p>
+      <div class="sd-sub">
+         <div class="subscribe"><img src="assets/img/new/mail.png" alt="email icon"><input type="text" maxlength="100" placeholder="Email Address" value="" style="text-transform: none;"><img src="assets/img/new/arrow.png" alt="newsletter icon"></div>
+      </div>
+   </div>
+</div>
+
+</div>
+
+</main>
+
+  
+
+</body>
+
+</html>

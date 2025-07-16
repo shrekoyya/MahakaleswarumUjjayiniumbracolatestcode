@@ -1,0 +1,430 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Core.Models.Blocks;
+@model Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent
+
+@{
+
+    var footer = Model.Root().Children().FirstOrDefault(x => x.ContentType.Alias == "footer");
+    var footercopyright = footer.Value<string>("footercopyright");
+    var footerprivacy = footer.Value<Link>("footerprivacy");
+    var footertermsandconditions = footer.Value<Link>("footertermsandconditions");
+    var footerdevelopedbycodedream = footer.Value<Link>("footerdevelopedbycodedream");
+    var footerlogosimage = footer.Value<BlockListModel>("footerlogosimage");
+    var totalvisitors = footer.Value<string>("totalvisitors");
+    var todaystotalvisitors = footer.Value<string>("todaystotalvisitors");
+    var footerimages = footer.Value<MediaWithCrops>("footerimages");
+    var locationdetails = footer.Value<MediaWithCrops>("locationdetails");
+    var locationemail = footer.Value<string>("locationemail");
+    var locationmap = footer.Value<string>("locationmap");
+    var locationglobe = footer.Value<MediaWithCrops>("locationglobe");
+    var templeimage = footer.Value<MediaWithCrops>("templeimage");
+    var templefaximage = footer.Value<MediaWithCrops>("templefaximage");
+    var templeurl = footer.Value<string>("templeurl");
+    var templephonenumbers = footer.Value<string>("templephonenumbers");
+    var templefaxnumber = footer.Value<string>("templefaxnumber");
+    var header = Model.Root().Children().FirstOrDefault(x => x.ContentType.Alias == "headertop");
+    var headermainmenuitems = header.Value<BlockListModel>("headermenuitemslist");
+
+}
+
+
+
+
+
+
+
+  <!-- footer area -->
+<footer class="footer-area">
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row footer-widget-wrapper pt-100 pb-70">
+                 @if (headermainmenuitems != null)
+                    {
+                    foreach (var item in headermainmenuitems)
+                    {
+                        var headercontent = item.Content;
+                        var headermainmenu = headercontent.Value<Link>("navigationmainmemu");
+                        var headersubmenulist = headercontent.Value<BlockListModel>("headersubmenulist");
+                        <div class="col-md-6 col-lg-2">
+                            <div class="footer-widget-box list">
+                                <h4 class="footer-widget-title">@headermainmenu.Name</h4>
+                                <ul class="footer-list">
+
+                                    @if (headersubmenulist != null)
+                                    {
+                                        foreach (var items in headersubmenulist)
+                                        {
+                                            var headersubmenu = items.Content.Value<Link>("headersubmenulist");
+                                            <li><a href="@headersubmenu.Url"><i class="fas fa-caret-right"></i> @headersubmenu.Name</a></li>
+                                            
+                                        }
+                                    }
+
+                                    
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    }
+                    }
+                    </div>
+        </div>
+    </div>
+
+
+
+    <style type="text/css">
+        .sd-additional-footer {
+            border-top: 1px solid #c0c3c7;
+            border-bottom: 1px solid #c0c3c7;
+            width: 93%;
+            height: 19%;
+            display: flex;
+            justify-content: space-evenly;
+            align-self: center;
+            align-items: center;
+        }
+
+            .sd-additional-footer .left {
+                width: 40%;
+                height: 70%;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+                .sd-additional-footer .left p {
+                    margin: 0;
+                    font-size: 15px;
+                    color: #181818;
+                }
+
+            .sd-additional-footer .sd-border-g {
+                border-right: 1px solid #dcdcdc;
+                border-left: 1px solid #dcdcdc;
+            }
+
+            .sd-additional-footer .middle {
+                width: 35%;
+                height: 70%;
+                padding-left: 30px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .sd-additional-footer .right {
+                width: 25%;
+                height: 70%;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 19px 19px 19px 30px;
+            }
+
+                .sd-additional-footer .right p {
+                    margin: 0;
+                    font-size: 15px;
+                    color: #181818;
+                }
+
+
+        .sd-additional-footer {
+            border-top: 1px solid #c0c3c7;
+            border-bottom: 1px solid #c0c3c7;
+            width: 93%;
+            height: 19%;
+            display: flex;
+            justify-content: space-evenly;
+            align-self: center;
+            align-items: center;
+        }
+
+        .footer-area {
+            background: #efefef !important;
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .footer-widget-title {
+            color: #2f3193;
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 21px;
+        }
+
+            .footer-widget-title::before, .footer-widget-title::after, .footer-list li a i {
+                display: none;
+            }
+
+        .footer-widget-title {
+            margin-bottom: 0px;
+        }
+
+        .footer-list li a {
+            color: #181818;
+            font-size: 14px;
+        }
+
+        .sd-additional-footer .left p img {
+            height: 15px;
+            margin-right: 10px;
+        }
+
+        .sd-footer-middle .sd-footer-middle-f .sd-additional-footer .left p img {
+            height: 15px;
+            margin-right: 10px;
+        }
+
+        img.sep {
+            height: 15px;
+            margin-right: 10px;
+        }
+
+        .right p img {
+            height: 13px;
+            margin-right: 10px;
+        }
+
+    </style>
+
+
+
+    <div class="sd-additional-footer container">
+        <div class="left">
+            @Html.Raw(locationmap)
+        </div>
+        <div class="middle sd-border-g">
+            <p><img src="@locationdetails.MediaUrl()" alt="mail" class="sep">@locationemail</p>
+            <p><img src="@locationglobe.MediaUrl()" alt="mail" class="sep">@templeurl</p>
+        </div>
+        <div class="right">
+            <p>
+                <img src="@templeimage.MediaUrl()" alt="number"> @templephonenumbers
+            </p>
+            <p>
+                <img src="@templefaximage.MediaUrl()" alt="print"> @templefaxnumber
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <style type="text/css">
+
+        .sd-visitors {
+            position: unset;
+            width: 93.5%;
+            align-self: center;
+            padding-top: 40px;
+            display: flex;
+            bottom: -32px;
+            justify-content: center;
+        }
+
+            .sd-visitors .left {
+                padding-right: 32vw;
+                margin-right: 3vw;
+            }
+
+                .sd-visitors .left p {
+                    font-weight: 600;
+                    color: #181818;
+                }
+
+                    .sd-visitors .left p span {
+                        background-color: #5a5a5a;
+                        color: #fff;
+                        margin-left: 8px;
+                        padding: 2px 5px;
+                        font-weight: 800;
+                        border-radius: 4px;
+                        letter-spacing: .7px;
+                    }
+
+            .sd-visitors .right {
+                margin-left: -3vw;
+            }
+
+                .sd-visitors .right p {
+                    font-weight: 600;
+                    color: #181818;
+                }
+
+                    .sd-visitors .right p span {
+                        margin-left: 8px;
+                        padding: 2px 5px;
+                        background-color: #5a5a5a;
+                        color: #fff;
+                        font-weight: 700;
+                        border-radius: 4px;
+                        letter-spacing: .7px;
+                    }
+
+        .sd-footer-tag {
+            height: 60px;
+            padding: 0 60px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            justify-content: space-around;
+        }
+
+            .sd-footer-tag .left {
+                width: 20%;
+                display: flex;
+                text-align: left;
+            }
+
+                .sd-footer-tag .left img {
+                    height: 30px;
+                    width: 30px;
+                    padding: 5px;
+                    cursor: pointer;
+                }
+
+            .sd-footer-tag .middle {
+                width: 60%;
+                height: 25%;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+            }
+
+                .sd-footer-tag .middle .border-r {
+                    border-right: 1px solid silver;
+                }
+
+                .sd-footer-tag .middle p {
+                    margin: 0;
+                    font-size: 13px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font-weight: 400;
+                    color: #181818;
+                    cursor: pointer;
+                }
+
+                .sd-footer-tag .middle .color {
+                    color: #2f3293;
+                }
+
+                .sd-footer-tag .middle .color {
+                    color: #2f3293;
+                }
+
+                .sd-footer-tag .middle p {
+                    margin: 0;
+                    font-size: 13px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font-weight: 400;
+                    color: #181818;
+                    cursor: pointer;
+                }
+
+            .sd-footer-tag .right {
+                width: 20%;
+                text-align: right;
+                font-size: 13px;
+                cursor: pointer;
+            }
+
+                .sd-footer-tag .right span {
+                    font-weight: 600;
+                    margin-left: 5px;
+                }
+
+    </style>
+
+
+
+
+    <div class="sd-visitors">
+        <div class="left">
+            <p>
+                Total Visitors
+                <span>@totalvisitors</span>
+            </p>
+        </div>
+        <div class="right">
+            <p>
+                Todays Visitors
+                <span>@todaystotalvisitors</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="sd-footer-bottom"><img src="@footerimages.MediaUrl()" alt=""></div>
+
+
+
+
+
+    <div class="sd-footer-tag">
+        <div class="left">
+            @if (footerlogosimage!=null)
+            {
+                foreach (var item in footerlogosimage)
+                {
+                    var socialimage = item.Content.Value<MediaWithCrops>("logos");
+                    <img src="@socialimage.MediaUrl()" alt="icon">
+                }
+            }
+           
+        </div>
+        <div class="middle">
+            <p class="border-r">@Html.Raw(footercopyright)</p>
+            <a href="@footerprivacy.Url" class="border-r">@footerprivacy.Name</a>&nbsp;&nbsp;
+            <a href="@footertermsandconditions.Url" class="border-r">@footertermsandconditions.Name</a>
+            
+        </div>
+        <div class="right"> <a href="@footerdevelopedbycodedream.Url" class="border-r">@footerdevelopedbycodedream.Name</a></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="copyright">
+        <div class="container">
+            <div class="copyright-wrapper">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <p class="copyright-text">
+                            &copy; Copyright <span id="date"></span> <a href="#"> Eduka </a> All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <ul class="footer-social">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+</footer>

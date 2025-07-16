@@ -1,0 +1,128 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Core.Models.Blocks;
+@model Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent
+
+@{
+    
+    var header = Model.Root().Children().FirstOrDefault(x => x.ContentType.Alias == "headertop");
+    var followus = header.Value<string>("followus");
+    var socialfeedslist = header.Value<BlockListModel>("socialfeedslist");
+    var headertoprightdetails = header.Value<BlockListModel>("headertoprightdetails");
+    var headerleftlogo = header.Value<MediaWithCrops>("headerleftlogo");
+    var headerlogadescription = header.Value<string>("headerlogadescription");
+    var headerrightlogo = header.Value<MediaWithCrops>("headerrightlogo");
+    var headermainmenuitems = header.Value<BlockListModel>("headermenuitemslist");
+
+	
+}
+
+<!-- header top -->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-wrap">
+                    <div class="header-top-left">
+                        <div class="header-top-social">
+                    <span>@followus: </span>
+                    @if (socialfeedslist!=null)
+                    {
+                        foreach (var item in socialfeedslist)
+                        {
+                            var socialfeedlinks = item.Content.Value("socialfeedlinks");
+                            var socialfeedimage = item.Content.Value("socialfeedimage");
+
+                            <a href=@socialfeedlinks><i class="fab @socialfeedimage"></i></a>
+                        }
+                    } 
+                    
+                          
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="header-top-contact">
+                            <ul>
+                        @if (headertoprightdetails!=null)
+                        {
+                            foreach (var items in headertoprightdetails)
+                            {
+                                var headertoprightlinksurl = items.Content.Value("headertoprightlinksurl");
+                                var headertoprighticon = items.Content.Value("headertoprighticon");
+                                var headertoprighttitle = items.Content.Value("headertoprighttitle");
+                                <li>
+                                    <a href=@headertoprightlinksurl><i class=@headertoprighticon></i> @headertoprighttitle</a>
+                                </li>
+                            }
+                        }
+                        
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="main-navigation">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand" href="index-2.html">
+                <img src="@headerleftlogo.MediaUrl()" style="" alt="logo">
+
+            </a>
+
+            @Html.Raw(headerlogadescription)
+
+            <a class="navbar-brand" href="index-2.html">
+                <img src="@headerrightlogo.MediaUrl()" alt="logo">
+
+            </a>
+
+            <div class="mobile-menu-right">
+                <!-- <div class="search-btn">
+                    <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
+                </div> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-mobile-icon"><i class="far fa-bars"></i></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav">
+                    @if (headermainmenuitems != null)
+                    {
+                        foreach (var item in headermainmenuitems)
+                        {
+                            var headercontent = item.Content;
+                            var headermainmenu = headercontent.Value<Link>("navigationmainmemu");
+                            var headersubmenulist = headercontent.Value<BlockListModel>("headersubmenulist");
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="@headermainmenu.Url" data-bs-toggle="dropdown">@headermainmenu.Name</a>
+                                <ul class="dropdown-menu fade-down">
+                                    @if (headersubmenulist != null)
+                                    {
+                                        foreach (var items in headersubmenulist)
+                                        {
+                                            var headersubmenu = items.Content.Value<Link>("headersubmenulist");
+                                            <li><a class="dropdown-item" href="@headersubmenu.Url">@headersubmenu.Name</a></li>
+                                        }
+                                    }
+                                   
+                                </ul>
+                            </li>
+                        }
+                    }
+
+                   
+                </ul>
+                <div class="nav-right">
+
+                    <!-- <div class="nav-right-btn mt-2">
+                        <a href="application-form.html" class="theme-btn"><span
+                                class="fal fa-pencil"></span>Apply Now</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,137 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- title -->
+    <title>Temple</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon-name.png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style type="text/css">
+      @@media only screen and (max-width: 650px) {
+          .navbar-brand img {
+            width: 65px;
+            }
+            .navbar>.container{
+                flex-wrap: inherit;
+                justify-content: space-evenly;
+            }
+            .navbar-brand p{margin-left: 0px !important;}
+            .navbar-brand {padding-left: 0px !important;}
+        }  
+
+
+.navbar-brand p
+{
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 600;
+    margin-left: 10px;
+    letter-spacing: .2px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- preloader -->
+    <!-- <div class="preloader">
+        <div class="loader-book">
+            <div class="loader-book-page"></div>
+            <div class="loader-book-page"></div>
+            <div class="loader-book-page"></div>
+        </div>
+    </div> -->
+    <!-- preloader end -->
+
+
+   
+
+
+   
+
+
+
+<style>
+    
+ @@media only screen and (max-width: 650px) {
+         .carousel {
+    position: relative;
+    margin-top: 75px;
+}
+        }  
+
+</style>
+<!-- header area -->
+    <header class="header">
+    @Html.Partial("/Views/Partials/blocklist/Headertop.cshtml")
+
+        
+    </header>
+    <!-- header area end -->
+
+
+
+@RenderBody()
+
+    @Html.Partial("/Views/Partials/blocklist/Footerdetails.cshtml")
+
+ 
+
+    <!-- footer area end -->
+
+
+    <!-- scroll-top -->
+    <a href="#" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
+    <!-- scroll-top end -->
+
+
+    <!-- js -->
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/counter-up.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
